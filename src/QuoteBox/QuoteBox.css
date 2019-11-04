@@ -8,6 +8,20 @@
     height: 200px;
 }
 
+.QuoteBox-display h1 {
+    font-style: italic;
+}
+
 .QuoteBox-display h3 {
     text-align: right;
+}
+
+button {
+    width: 30%;
+    height: 40px;
+    margin: 0 35%;
+    border-radius: 20px;
+    font-size: 16pt;
+    font-weight: bold;
+    outline: none;
 }

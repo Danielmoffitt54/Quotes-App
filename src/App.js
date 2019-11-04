@@ -15,16 +15,35 @@ class App extends Component {
 
   getRandomQuote = () => {
     var random = Math.floor(Math.random() * quotes.length);
-    this.setState({
-      quote: '"' + quotes[random].quote + '"',
-      author: '- ' + quotes[random].author
-    });
+    var authorLength = quotes[random].author.length;
+    if (authorLength > 0 ) {
+      this.setState({
+        quote: '"' + quotes[random].quote + '"',
+        author: '- ' + quotes[random].author
+      });
+    } else {
+      this.setState({
+        quote: '"' + quotes[random].quote + '"',
+        author: '- Unknown'
+      });
+    }
   };
+
+  // function ro generate a random color from R: 0-154, G: 0-154, B: 0-154
+  getRandomColor(upperBound) {
+    const color = `rgb(
+      ${Math.floor(Math.random() * upperBound)},
+      ${Math.floor(Math.random() * upperBound)},
+      ${Math.floor(Math.random() * upperBound)}
+    )`;
+    return color;
+  }
 
   render() {
     return (
       <div>
-        <QuoteBox 
+        <QuoteBox
+          color={this.getRandomColor(155)}
           quote={this.state.quote} 
           author={this.state.author} 
           onClick={this.getRandomQuote}
