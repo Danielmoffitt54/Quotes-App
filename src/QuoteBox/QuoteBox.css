@@ -1,0 +1,13 @@
+.QuoteBox {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.QuoteBox-display {
+    height: 200px;
+}
+
+.QuoteBox-display h3 {
+    text-align: right;
+}
