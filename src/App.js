@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QuoteBox from './QuoteBox/QuoteBox';
-import './App.css';
 import quotes from './quotes';
+import './App.css';
 
 class App extends Component {
   // Setting up the constructor function so we can set up our default state.
@@ -41,7 +41,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <QuoteBox
           color={this.getRandomColor(155)}
           quote={this.state.quote} 

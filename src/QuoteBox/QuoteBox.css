@@ -1,26 +1,41 @@
 .QuoteBox {
-    max-width: 60%;
-    display: block;
-    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    display: inline-block;
+    background-color: white;
+    border-radius: 15px;
 }
 
-.QuoteBox-display {
-    height: 200px;
-}
-
-.QuoteBox-display h1 {
+.QuoteBox-quote {
     font-style: italic;
 }
 
-.QuoteBox-display h3 {
+.QuoteBox-author {
     text-align: right;
 }
 
-button {
-    width: 30%;
-    height: 40px;
-    margin: 0 35%;
-    border-radius: 20px;
+.fadeIn {
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.QuoteBox-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-bottom-left-radius: 10px;
+    color: white;
     font-size: 16pt;
     font-weight: bold;
     outline: none;
